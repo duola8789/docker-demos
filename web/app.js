@@ -11,6 +11,6 @@ http.createServer(function(req, res){
 	res.writeHead(statusCode, {"Content-Type": "text/plain"});
     res.write(resText);
     res.end();
-}).listen(8016);
+}).listen(5002);
 
 console.log("blog-app start.", new Date());

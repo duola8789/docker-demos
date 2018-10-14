@@ -4,11 +4,11 @@ FROM node:latest
 COPY ./src /var/www/api
 
 # 设置工作目录
-WORKDIR /root/app
+WORKDIR /var/www/api
 
 # 安装依赖
-RUN cd /var/www/api; npm install
+#RUN cd /var/www/api; npm install
 
-EXPOSE 3000
+EXPOSE 5002
 
-CMD ["node", "/var/www/api/app.js"]
+CMD ["npm", "run", "start"]

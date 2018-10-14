@@ -1,5 +1,6 @@
 var http = require("http");
 
+
 //创建一个编译监听程序
 http.createServer(function(req, res){
 	var statusCode = 404;
@@ -10,6 +11,6 @@ http.createServer(function(req, res){
 	res.writeHead(statusCode, {"Content-Type": "text/plain"});
     res.write(resText);
     res.end();
-}).listen(5002);
+}).listen(8016);
 
 console.log("blog-app start.", new Date());

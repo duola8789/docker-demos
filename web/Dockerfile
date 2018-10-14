@@ -19,6 +19,7 @@ ADD global.conf /etc/nginx/conf.d/
 EXPOSE 5000
 
 # 安装依赖
+RUN npm install pm2 -g
 #RUN npm install
 
 CMD ["npm", "run", "hello"]
