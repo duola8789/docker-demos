@@ -3,7 +3,7 @@ FROM node:latest
 # 如果上个步骤已经更新软件源，这步可以忽略
 RUN apt-get update
 
-# 安装 NodeJS 和 npm
+# 安装 Nginx
 RUN apt-get -y -q install nginx
 
 # 拷贝文件
@@ -16,10 +16,9 @@ WORKDIR /var/www/html
 ADD nginx.conf /etc/nginx/nginx.conf
 ADD global.conf /etc/nginx/conf.d/
 
-EXPOSE 5000
+EXPOSE 80
 
 # 安装依赖
-RUN npm install pm2 -g
 #RUN npm install
 
-CMD ["npm", "run", "hello"]
+CMD ["npm", "run", "start"]

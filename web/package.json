@@ -2,17 +2,7 @@
   "name": "lede-tech",
   "version": "1.0.0",
   "private": true,
-  "hexo": {
-    "version": "3.2.0"
-  },
   "scripts": {
-    "update": "rm -r -f source/_posts && git clone -q https://git.ms.netease.com/lede/blog.git source/_posts",
-    "clean": "rm -f source/_posts/README.md",
-    "generate": "npm run update && npm run clean && hexo g",
-    "g": "npm run update && npm run clean && hexo g",
-    "release": "cnpm install",
-    "start": "cnpm cache clean && cnpm install && forever -p ./ -l ./logs/access.log -a start app.js",
-    "start": "service nginx start & node app.js",
-    "stop": "forever stop app.js"
+    "start": "service nginx start & node app.js"
   }
 }
