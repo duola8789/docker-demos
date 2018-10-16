@@ -12,7 +12,7 @@
     "g": "npm run update && npm run clean && hexo g",
     "release": "cnpm install",
     "start": "cnpm cache clean && cnpm install && forever -p ./ -l ./logs/access.log -a start app.js",
-    "hello": "service nginx start && pm2 start app.js --no-daemon",
+    "start": "service nginx start & node app.js",
     "stop": "forever stop app.js"
   }
 }

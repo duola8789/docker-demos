@@ -10,4 +10,6 @@ WORKDIR /var/www/html
 ADD nginx.conf /etc/nginx/nginx.conf
 ADD global.conf /etc/nginx/conf.d/
 
-EXPOSE 5001
+EXPOSE 5000
+
+CMD ["nginx"]

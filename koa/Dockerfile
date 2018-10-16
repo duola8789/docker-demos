@@ -7,8 +7,8 @@ COPY ./src /var/www/api
 WORKDIR /var/www/api
 
 # 安装依赖
-#RUN cd /var/www/api; npm install
+RUN cd /var/www/api; npm install
 
-EXPOSE 8016
+EXPOSE 80
 
 CMD ["npm", "run", "start"]
