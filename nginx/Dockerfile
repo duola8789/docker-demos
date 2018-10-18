@@ -10,6 +10,9 @@ WORKDIR /var/www/html
 ADD nginx.conf /etc/nginx/nginx.conf
 ADD global.conf /etc/nginx/conf.d/
 
-EXPOSE 5000
+# 删除默认配置文件
+RUN cd /etc/nginx/conf.d/; rm default.conf
+
+EXPOSE 80
 
 CMD ["nginx"]
