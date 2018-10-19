@@ -6,4 +6,4 @@
 - nginx： docker和nginx的练习，利用nginx提供静态服务和端口转发
 - nodejs： docker和nodejs的练习，nodejs监听了一个8016端口，与上一个nginx结合起来实现静态服务和端口转发及监听
 - web： 一个docker同时实现nginx和nodejs服务，不使用docker compose，只利用npm同时启动两个服务
-- compose： 利用docker compose同时启动nginx容器和nodejs容器
+- compo： 利用docker compose同时启动nginx容器和nodejs容器

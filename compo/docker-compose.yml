@@ -1,0 +1,17 @@
+version: "3"
+services:
+  nginx:
+    # if images has been build, use it
+    # image: "nginx01"
+    build: "./nginx"
+    ports:
+      - "80:80"
+    links:
+      # writ the host in the container
+      - nodejs:nodeServer
+  nodejs:
+    # if images has been build, use it
+    # image: "node01"
+    build: "./nodejs"
+    ports:
+      - "8016:8016"
